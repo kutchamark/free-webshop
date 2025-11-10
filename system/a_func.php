@@ -83,6 +83,9 @@
 
             ensure_game_tables();
 
+            require_once __DIR__ . '/modules/platform_features.php';
+            PlatformFeatureService::boot($conn);
+
             //function check login
             function check_login(){
                 if(!isset($_SESSION['id'])){
